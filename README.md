@@ -11,7 +11,13 @@ Programa em C++ para o terminal que controla equipamentos de TI de uma empresa (
 - Salvar os dados em arquivo, para não perdê-los ao fechar o programa
 - Validação de entradas (ID repetido, equipamento já em uso)
 
-## Como baixar e rodar
+## Download (Windows)
+
+Baixe o executável pronto na [página de Releases](https://github.com/lucorde/inventario-ti/releases), sem precisar compilar: baixe o `inventario.exe` e dê dois cliques. Os dados são salvos no arquivo `equipamentos.txt`, na mesma pasta do programa.
+
+O Windows pode mostrar um aviso de segurança ao abrir, porque o programa não tem assinatura digital. Clique em "Mais informações" e depois em "Executar assim mesmo".
+
+## Compilar a partir do código
 
 1. Baixe o projeto:
 
