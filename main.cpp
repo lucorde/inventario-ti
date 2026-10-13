@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
 
 struct Equipamento {
@@ -244,6 +245,19 @@ void remover(vector<Equipamento>& lista) {
     cout << "Equipamento nao encontrado.\n";
 }
 
+void limparTela() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
+void pausar() {
+    cout << "\nPressione Enter para continuar...";
+    cin.get();
+}
+
 int main() {
     vector<Equipamento> equipamentos;
     carregar(equipamentos);
@@ -251,22 +265,28 @@ int main() {
     int opcao = -1;
 
     while (opcao != 0) {
-        cout << "\n=== Inventario de TI ===\n";
-        cout << "1 - Cadastrar equipamento\n";
-        cout << "2 - Listar equipamentos\n";
-        cout << "3 - Buscar equipamento\n";
-        cout << "4 - Atribuir a um usuario\n";
-        cout << "5 - Devolver equipamento\n";
-        cout << "6 - Remover equipamento\n";
-        cout << "0 - Sair\n";
+        limparTela();
+        cout << "==============================\n";
+        cout << "       INVENTARIO DE TI       \n";
+        cout << "==============================\n";
+        cout << " 1 - Cadastrar equipamento\n";
+        cout << " 2 - Listar equipamentos\n";
+        cout << " 3 - Buscar equipamento\n";
+        cout << " 4 - Atribuir a um usuario\n";
+        cout << " 5 - Devolver equipamento\n";
+        cout << " 6 - Remover equipamento\n";
+        cout << " 0 - Sair\n";
+        cout << "------------------------------\n";
         cout << "Escolha: ";
 
         if (!lerInteiro(opcao)) {
             opcao = -1;
             cout << "Digite apenas numeros.\n";
+            pausar();
             continue;
         }
 
+        limparTela();
         switch (opcao) {
             case 1: cadastrar(equipamentos); break;
             case 2: listar(equipamentos); break;
@@ -277,6 +297,7 @@ int main() {
             case 0: cout << "Ate mais!\n"; break;
             default: cout << "Opcao invalida.\n";
         }
+        pausar();
     }
     return 0;
 }
