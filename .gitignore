@@ -1,0 +1,7 @@
+inventario.exe
+equipamentos.txt
+*.exe
+*.obj
+*.ilk
+*.pdb
+equipamentos.txt
