@@ -11,14 +11,28 @@ Programa em C++ para o terminal que controla equipamentos de TI de uma empresa (
 - Salvar os dados em arquivo, para não perdê-los ao fechar o programa
 - Validação de entradas (ID repetido, equipamento já em uso)
 
-## Como compilar e rodar
+## Como baixar e rodar
 
-Requer um compilador C++ (g++).
+1. Baixe o projeto:
 
-    g++ main.cpp -o inventario
-    ./inventario
+        git clone https://github.com/lucorde/inventario-ti.git
+        cd inventario-ti
 
-No Windows, rode `inventario.exe` (ou `.\inventario` no PowerShell).
+2. Compile (requer g++):
+
+        g++ main.cpp -o inventario
+
+3. Execute:
+
+        ./inventario
+
+No Windows (PowerShell), use `.\inventario`.
+
+Sem compilador instalado? Cole o conteúdo de `main.cpp` em um compilador online, como o onlinegdb.com, e clique em Run. Nesse caso os dados podem não ser salvos entre execuções.
+
+## Demonstração
+
+![Inventário de TI rodando no terminal](exemplo.png)
 
 ## Exemplo de uso
 
